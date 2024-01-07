@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app\\Http\\Controllers\\Days",
+    "\\app\\Http\\Controllers\\Program",
+    "\\app\\Models\\Days",
+    "\\app\\Models\\Pages",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\jurse2023",
+    "\\resources\\views\\jurse2023_admin\\days",
+    "\\resources\\views\\jurse2023_admin\\participation"
+  ],
+  "SelectedNode": "\\resources\\views\\jurse2023\\dates.blade.php",
+  "PreviewInSolutionExplorer": false
+}
