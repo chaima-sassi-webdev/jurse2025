@@ -11,7 +11,6 @@ class Sponsors extends Model
 {
     use HasFactory;
      protected $fillable = [
-        'id',
         'src',
         'alt',
         'order'

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Sessions;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -20,4 +20,10 @@ class Sessions extends Model
     {
         return $this->hasMany(Authors::class, 'author_id');
     }
+    public function showCreateSessionForm()
+{
+    $authors = Authors::all();
+
+    return view('sessions', compact('authors'));
+}
 }

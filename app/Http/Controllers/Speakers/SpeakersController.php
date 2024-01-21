@@ -69,7 +69,7 @@ public function updateSpeaker($id, Request $request)
     $request->validate([
         'firstname' => 'required|string|max:255',
         'lastname' => 'required|string|max:255',
-        'website' => 'required|string|max:555',
+        'website' => 'required|string|max:255',  // Adjusted maximum length
         'description' => 'required|string|max:2000',
         'src' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
     ]);
@@ -90,7 +90,7 @@ public function updateSpeaker($id, Request $request)
     }
 
     // Update other fields
-    $affectedRows = DB::table($table)->where('id', $id)->update([
+     $affectedRows = DB::table($table)->where('id', $id)->update([
         'firstname' => $request->input('firstname'),
         'lastname' => $request->input('lastname'),
         'website' => $request->input('website'),
@@ -104,6 +104,7 @@ public function updateSpeaker($id, Request $request)
         return redirect()->route('admin/speakerslist')->with('error', 'Failed to update speaker');
     }
 }
+
 public function deleteSpeaker($id)
 {
     $table = 'speakers';

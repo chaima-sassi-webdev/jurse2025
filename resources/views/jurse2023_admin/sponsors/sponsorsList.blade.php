@@ -41,7 +41,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form method="post" action="{{ route('admin/sponsors/updateSponsor', ['id' => $sponsors->id]) }}" enctype="multipart/form-data">
+                                    <form method="post" action="{{ route('admin/sponsors/update', ['id' => $sponsors->id]) }}" enctype="multipart/form-data">
 
                                             @csrf
                                     @method('PUT')

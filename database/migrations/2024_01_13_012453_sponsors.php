@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('authors', function (Blueprint $table) {
+       Schema::create('sponsors',function (Blueprint $table){
             $table->id();
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->string('organism');
-            $table->unsignedBigInteger('country_id');
+            $table->string('src');
+            $table->string('alt');
+            $table->integer('order');
             $table->timestamps();
-            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
         });
     }
 
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('authors');
+         Schema::dropIfExists('sponsors');
     }
 };

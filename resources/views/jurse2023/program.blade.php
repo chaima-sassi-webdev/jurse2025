@@ -35,7 +35,7 @@
     </head>
 
     <body class="stretched">
- <header id="header" class="full-header">
+        <header id="header" class="full-header">
             <div id="header-wrap">
                 <div class="container">
                     <div class="header-row">
@@ -165,12 +165,9 @@
             <div class="container">
                 <h3 class="mb-0">
                     Program
-                </h3>
-            </div>
-        </div>
-
-        <div class="py-1">
-            <div class="container">
+                </h3><br><br>
+                <div class="py-1">
+                <div class="container">
 
                 <table id="program-table-id" class="table table-bordered program-table-new">
                     <tbody>
@@ -1354,60 +1351,59 @@
 
                 </div>
             </div>
+            </div>
+        </div>
         </div>
 
-        <footer class="text-center text-lg-start bg-footer">
+       <footer class="text-center text-lg-start sectionfooter">
             <div class="container p-4">
                 <section class="footer-text">
                     <div class="row">
+                         <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
+                            <div id="logo">
+                            <a href="{{ route('index.html') }}" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="RSLab Logo"></a>
+                         </div>
+                        </div>
+                        <hr class="w-100 clearfix d-md-none mt-3" />
 
                         <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
                             <div class="mb-2">
-                                <h4 class="white">Stay connected!</h4>
+                                <h4 class="text">Stay connected!</h4>
                             </div>
-                            <a href="https://www.facebook.com/rslabgr/" target="_blank" class="social-icon inline-block si-dark si-small mb-0 pb-0 si-facebook">
+                            <a href="https://www.facebook.com/ieee.tunisia" target="_blank" class="social-icon inline-block si-dark si-small mb-0 pb-0 si-facebook">
                                 <i class="icon-facebook"></i>
                                 <i class="icon-facebook"></i>
                             </a>
 
-                            <a href="https://twitter.com/JURSE2023/" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-twitter">
+                             <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQG5HniUDlKx0wAAAYz6SvaQpUMIcf_nfDRUv8BAPpWbyRPN6HUpHMQKon0Ni1tekESKfk0KVJ9DrQ41uYokN3u2drWJBATlmFyM8WZfCAuj5bItLucCWriZf5U0A-s8nNzHvuY=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fieee-tunisia%2F" target="_blank" class="social-icon inline-block si-dark si-small mb-0 pb-0 si-facebook">
+                                <i class="icon-linkedin"></i>
+                                <i class="icon-linkedin"></i>
+                            </a>
+
+                            <a href="https://twitter.com/IEEEorg" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-twitter">
                                 <i class="icon-twitter"></i>
                                 <i class="icon-twitter"></i>
                             </a>
 
-                            <a href="https://www.youtube.com/playlist?list=PLyHJqeu2tpN5iLzj1HaVP9oCirvFoBN7r" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-youtube">
+                            <a href="https://www.youtube.com/channel/UCsXcME7PcCuZ2ROr-K2R1oQ" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-youtube">
                                 <i class="icon-youtube"></i>
                                 <i class="icon-youtube"></i>
                             </a>
                         </div>
 
-                        <hr class="w-100 clearfix d-md-none mt-3" />
-
-                        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
-                            <div class="mb-1">
-                                <h4 class="white mb-0">Contact person</h4>
-                            </div>
-                            Nektarios Chrysoulakis<br>
-                            zedd2@iacm.forth.gr<br>
-                            +30 2810-391-762 <br>
-                            +30 6932-929-775
-                        </div>
 
                         <hr class="w-100 clearfix d-md-none mt-3" />
 
                         <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
-                            <div class="mb-1">
-                                <h4 class="white mb-0">Venue</h4>
-                            </div>
-                            Cultural Conference Center of Heraklion<br>
-                            N. Plastira Avenue 49, Heraklion, 71201 Greece
+                            <p class="text">A not-for-profit organization, IEEE is the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+                            Near modern-day Tunis, Tunisia</p>
                         </div>
                     </div>
 
                 </section>
             </div>
-            <div class="text-center p-3 footer-text" style="background-color: rgba(0, 0, 0, 0.2)">
-                © Copyright <span id="year"></span>: Remote Sensing Laboratory, Foundation for Research and Technology - Hellas (FORTH)
+            <div class="text-center p-3 footer-text" style="background-color: #d24438">
+                © Copyright <span id="year"></span> : IEEE – All rights reserved. Use of this website signifies your agreement to the IEEE Terms and Conditions.
             </div>
 
         </footer>

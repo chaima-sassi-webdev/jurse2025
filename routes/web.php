@@ -9,13 +9,18 @@ use App\Http\Controllers\Sessions\SessionsController;
 use App\Http\Controllers\Speakers\SpeakersController;
 use App\Http\Controllers\Sponsors\SponsorController;
 use App\Http\Controllers\Photo\PhotoController;
+use App\Models\Links\Links;
+use App\Models\Posts\Posts;
+use App\Http\Controllers\Posts\PostsController;
 
 
 /*****************************************************************************************************************************************************************/
 /*************************************************************       routes of user interfaces       *****************************************************/
 /******************************************************                                                        ********************************************************/
 
-Route::get('/', function () {return view('jurse2023.index');});
+Route::get('/', function () {       $links = Links::all();
+        $posts = Posts::all();
+        return view('jurse2023.index', ['links'=>$links,'posts' => $posts]);});
 Route::get('/index.html', [HomeController::class, 'userHome'])->name('index.html');
 Route::get('/dates.html', [HomeController::class, 'userDate'])->name('dates.html');
 Route::get('/index-2.html', [HomeController::class, 'userHome'])->name('index-2.html');
@@ -57,11 +62,11 @@ Route::get('/home', [HomeController::class, 'index'])->name('/home');
 Route::get('/admin/home', [HomeController::class, 'index'])->name('admin/home');
 Route::get('/admin/pages',[PagesController::class, 'index'])->name('admin/pages');
 
-Route::get('/admin/links',[LinksController::class, 'index'])->name('admin/links');
-Route::get('/admin/img_vid',[MediasController::class, 'index'])->name('admin/img_vid');
+
 Route::get('/admin/session',[SessionsController::class, 'index'])->name('admin/session');
 Route::get('/admin/postersession',[OrganizorsController::class, 'index'])->name('admin/postersession');
 Route::get('/admin/speakers',[SpeakersController::class, 'index2'])->name('admin/speakers');
+
 Route::post('/admin/speakers/store',[SpeakersController::class, 'create_Speakers'])->name('speakers/store');
 Route::put('/admin/speakers/{id}', [SpeakersController::class, 'updateSpeaker'])->name('admin/speakers/updateSpeaker');
 Route::get('/admin/speakerslist',[SpeakersController::class, 'ListOfSpeakers'])->name('admin/speakerslist');
@@ -69,11 +74,20 @@ Route::delete('/admin/deleteSpeaker/{id}',[SpeakersController::class, 'deleteSpe
 
 /** Sponsors Routers */
 Route::get('/admin/createSponsor',[SponsorController::class, 'index'])->name('admin/createSponsor');
-Route::post('/admin/sponsors/store',[SponsorController::class, 'storeSponsor'])->name('admin/sponsors/store');
+
+Route::post('/admin/sponsors/create',[SponsorController::class, 'storeSponsor'])->name('admin/sponsors/create');
 Route::get('/admin/sponsorslist',[SponsorController::class, 'index2'])->name('admin/sponsorslist');
-Route::put('/admin/sponsors/{id}', [SponsorController::class, 'updateSponsor'])->name('admin/sponsors/updateSponsor');
+Route::put('/admin/sponsors/update/{id}', [SponsorController::class, 'updateSponsor'])->name('admin/sponsors/update');
 Route::delete('/admin/deleteSponsor/{id}',[SponsorController::class, 'deleteSponsor'])->name('admin/deleteSponsor');
 
+
+/** Sessions Routers */
+Route::get('/admin/Session',[SessionsController::class, 'index'])->name('admin/session');
+
+Route::post('/admin/create_Session',[SessionsController::class, 'create_Session'])->name('admin/create_Session');
+Route::get('/admin/sessionslist',[SessionsController::class, 'index2'])->name('admin/sessionslist');
+Route::put('/admin/sponsors/update/{id}', [SponsorController::class, 'updateSponsor'])->name('admin/sponsors/update');
+Route::delete('/admin/deleteSponsor/{id}',[SponsorController::class, 'deleteSponsor'])->name('admin/deleteSponsor');
 
 
 /** Medias Routers */
@@ -89,3 +103,18 @@ Route::post('/admin/medias/photo/store',[PhotoController::class, 'storePhoto'])-
 Route::get('/admin/photoslist',[PhotoController::class, 'index2'])->name('admin/photoslist');
 Route::put('/admin/photo/{id}', [PhotoController::class, 'updatePhoto'])->name('admin/photos/updatePhoto');
 Route::delete('/admin/deletePhotos/{id}',[PhotoController::class, 'deletePhoto'])->name('admin/deletePhotos');
+
+/** Links Routers */
+Route::get('/admin/links',[LinksController::class, 'index'])->name('admin/links');
+Route::get('/admin/linksList',[LinksController::class, 'get_all'])->name('admin/linksList');
+Route::put('/admin/updateLink/{id}', [LinksController::class, 'updateLink'])->name('admin/updateLink');
+Route::post('/admin/links/create',[LinksController::class, 'create_link'])->name('admin/links/store');
+Route::delete('/admin/deleteLink/{id}',[LinksController::class, 'deleteLink'])->name('admin/deleteLink');
+
+
+/** Posts Routers */
+Route::get('/admin/posts',[PostsController::class, 'index'])->name('admin/posts');
+Route::get('/admin/postsList',[PostsController::class, 'get_all'])->name('admin/postsList');
+Route::put('/admin/updatePost/{id}', [PostsController::class, 'updatePost'])->name('admin/updatePost');
+Route::post('/admin/posts/create',[PostsController::class, 'create_post'])->name('admin/posts/store');
+Route::delete('/admin/deletePost/{id}',[PostsController::class, 'deletePost'])->name('admin/deletePost');

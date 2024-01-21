@@ -11,6 +11,11 @@
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-white">Links</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('admin/posts')}}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-white">Posts</span>
+                        </a>
+                    </li>
                     <li>
                         <a href="{{ route('admin/pages') }}" class="nav-link px-0 align-middle" data-link="pages">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline text-white">Pages</span>

@@ -6,27 +6,24 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+   public function up(): void
     {
-        Schema::create('sessions', function (Blueprint $table) {
+        Schema::create('sessions',function (Blueprint $table){
             $table->id();
-            $table->string('description');
-            $table->string('order');
             $table->string('title');
+            $table->string('order');
+            $table->string('description');
             $table->unsignedBigInteger('author_id');
-            $table->timestamps();
+
+            // Creating the foreign key relationship
             $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
+
+            $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('sessions');
+         Schema::dropIfExists('sessions');
     }
 };

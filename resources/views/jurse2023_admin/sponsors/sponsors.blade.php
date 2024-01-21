@@ -10,13 +10,13 @@
                         {{ session('success') }}
                     </div>
              @endif
-    <form method="post" action="{{ route('admin/sponsors/store') }}"  enctype="multipart/form-data">
-                @csrf
+   <form method="POST" action="{{ route('admin/sponsors/create') }}" enctype="multipart/form-data">
+    @csrf
          <div class="d-flex justify-content-between align-items-center mb-3">
                     <h1 class="text-center mb-0">Create New Sponsor</h1>
          </div>
         <div class="mb-3">
-            <label for="src" class="form-label">Image Source:</label>
+            <label for="src"  class="form-label">Image Source:</label>
             <input type="file" class="form-control" id="src" name="src" required>
         </div>
 

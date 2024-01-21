@@ -125,7 +125,36 @@ Bootstrap Adjustments
     margin-bottom: 1rem;
 }
 
+.sectionfooter{
+    background: white;
+}
+.text{
+    color: #d24438;
+    font-weight: bold;
+}
+.card-container {
+            display: flex;
+            justify-content: space-around; /* Adjust this property to change the space between the cards */
+            flex-wrap: wrap; /* Allow cards to wrap to the next line if the screen size is too small */
+        }
+.card {
+            display: inline-block;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px;
+            background: transparent;
+            max-width: 300px; /* Set a max width for each card */
+        }
 
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-start {
+            text-align: start;
+        }
 /* ----------------------------------------------------------------
 Basic
 -----------------------------------------------------------------*/
@@ -145,6 +174,9 @@ dl, dt, dd, ol, ul, li {
     overflow:hidden;
 }
 
+#recent-posts{
+     padding-top: 5%;
+}
 ::selection {
     background: #004A7B;
     color: #FFF;
@@ -2745,7 +2777,6 @@ Sections
     position: relative;
     width: 100%;
     margin: 60px 0;
-    padding: 60px 0;
     background-color: #F4F4F4;
     overflow: hidden;
 }
@@ -3432,7 +3463,7 @@ Logo
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #040303; /* Change this to black or any other color */
+    background-color: #3C4048 ; /* Change #040303 this to black or any other color */
     opacity: 0.5; /* Adjust the opacity to your preference */
 }
 .header-size-sm #header-wrap #logo img {

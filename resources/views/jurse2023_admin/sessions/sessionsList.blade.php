@@ -26,7 +26,7 @@
                 @foreach($speakers as $speaker)
                 <tr>
                   
-                  <td>{{ $speaker->firstname }}</td>
+                  <td>{{ $speaker->firstName }}</td>
                   <td>{{ $speaker->lastname }}</td>
                   <td>{{ $speaker->website }}</td>
                   <td>{{ substr($speaker->description, 0, 50) }} ...</td>
@@ -49,7 +49,7 @@
                                     @method('PUT')
                                    <div class="mb-3">
                                         <label for="firstname" class="form-label">LastName</label>
-                                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Your speaker's firstname " value="{{ old('firstname', $speaker->firstname) }}">
+                                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Your speaker's firstname " value="{{ old('firstname', $speaker->firstName) }}">
                                         @error('lastname')
                                           <span class="text-danger">{{ $message }}</span>
                                          @enderror

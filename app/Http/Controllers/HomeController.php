@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
+use App\Models\Links\Links;
+use App\Models\Posts\Posts;
 class HomeController extends Controller
 {
     /**
@@ -27,7 +27,9 @@ class HomeController extends Controller
     }
         public function userHome()
     {
-        return view('jurse2023.index');
+        $links = Links::all();
+        $posts = Posts::all();
+        return view('jurse2023.index', ['links' => $links , 'posts'=> $posts]);
     }
      public function userDate()
     {

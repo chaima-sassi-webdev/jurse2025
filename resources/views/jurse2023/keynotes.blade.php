@@ -182,7 +182,9 @@
                         </div>
 
                         <div class="col-lg-3 text-start mb-5">
-                            <h4 class="blue-color">{{ $speaker->firstName }} {{ $speaker->lastname }}</h4>
+                            <h4 class="blue-color">
+                                {{ $speaker->firstname }} 
+                                {{ $speaker->lastname }}</h4>
 
                             <p>
                                 {{ $speaker->description }}

@@ -35,7 +35,7 @@
 
     <body class="stretched">
 
-         <header id="header" class="full-header">
+       <header id="header" class="full-header">
             <div id="header-wrap">
                 <div class="container">
                     <div class="header-row">
@@ -43,11 +43,6 @@
                         <div id="logo">
                             <a href="{{ route('index.html') }}" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="RSLab Logo"></a>
                          </div>
-
-                        <div id="primary-menu-trigger">
-                            <svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
-                        </div>
-
                         <nav class="primary-menu">
 
                             <ul class="menu-container">
@@ -56,6 +51,26 @@
                                 </li>
                                 <li class="menu-item">
                                     <a class="menu-link" href="{{ route('dates.html') }}"><div>Dates</div></a>
+                                </li>
+                                 <li class="menu-item">
+                                    <a class="menu-link cursor-normal"><div>Participation<i class="icon-caret-down1"></i></div></a>
+                                    <ul class="sub-menu-container">
+                                        <li class="menu-item">
+                                            <a class="menu-link" href="{{ route('program.html') }}"><div>Program</div></a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a class="menu-link" href="{{ route('guidelines.html') }}"><div>Guidelines</div></a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a class="menu-link" href="{{ route('call-for-papers.html') }}"><div>Call for Papers</div></a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a class="menu-link" href="{{ route('registration.html') }}"><div>Registration</div></a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a class="menu-link" href="{{ route('social-events.html') }}"><div>Social Events</div></a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="menu-item">
                                     <a class="menu-link cursor-normal"><div>Presentation<i class="icon-caret-down1"></i></div></a>
@@ -146,8 +161,8 @@
                 <h3 class="mb-0">
                     Call for Papers
                 </h3>
-            </div>
-        </div>
+            </br>
+        </br>
 
         <div class="container mb-5">
 
@@ -203,63 +218,60 @@
             </p>
 
         </div>
-
-        <footer class="text-center text-lg-start bg-footer mt-5">
+            </div>
+        </div>
+       <footer class="text-center text-lg-start sectionfooter">
             <div class="container p-4">
                 <section class="footer-text">
                     <div class="row">
+                         <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
+                            <div id="logo">
+                            <a href="{{ route('index.html') }}" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="RSLab Logo"></a>
+                         </div>
+                        </div>
+                        <hr class="w-100 clearfix d-md-none mt-3" />
 
                         <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
                             <div class="mb-2">
-                                <h4 class="white">Stay connected!</h4>
+                                <h4 class="text">Stay connected!</h4>
                             </div>
-                            <a href="https://www.facebook.com/rslabgr/" target="_blank" class="social-icon inline-block si-dark si-small mb-0 pb-0 si-facebook">
+                            <a href="https://www.facebook.com/ieee.tunisia" target="_blank" class="social-icon inline-block si-dark si-small mb-0 pb-0 si-facebook">
                                 <i class="icon-facebook"></i>
                                 <i class="icon-facebook"></i>
                             </a>
 
-                            <a href="https://twitter.com/JURSE2023/" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-twitter">
+                             <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQG5HniUDlKx0wAAAYz6SvaQpUMIcf_nfDRUv8BAPpWbyRPN6HUpHMQKon0Ni1tekESKfk0KVJ9DrQ41uYokN3u2drWJBATlmFyM8WZfCAuj5bItLucCWriZf5U0A-s8nNzHvuY=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fieee-tunisia%2F" target="_blank" class="social-icon inline-block si-dark si-small mb-0 pb-0 si-facebook">
+                                <i class="icon-linkedin"></i>
+                                <i class="icon-linkedin"></i>
+                            </a>
+
+                            <a href="https://twitter.com/IEEEorg" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-twitter">
                                 <i class="icon-twitter"></i>
                                 <i class="icon-twitter"></i>
                             </a>
 
-                            <a href="https://www.youtube.com/playlist?list=PLyHJqeu2tpN5iLzj1HaVP9oCirvFoBN7r" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-youtube">
+                            <a href="https://www.youtube.com/channel/UCsXcME7PcCuZ2ROr-K2R1oQ" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-youtube">
                                 <i class="icon-youtube"></i>
                                 <i class="icon-youtube"></i>
                             </a>
                         </div>
 
-                        <hr class="w-100 clearfix d-md-none mt-3" />
-
-                        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
-                            <div class="mb-1">
-                                <h4 class="white mb-0">Contact person</h4>
-                            </div>
-                            Nektarios Chrysoulakis<br>
-                            zedd2@iacm.forth.gr<br>
-                            +30 2810-391-762 <br>
-                            +30 6932-929-775
-                        </div>
 
                         <hr class="w-100 clearfix d-md-none mt-3" />
 
                         <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
-                            <div class="mb-1">
-                                <h4 class="white mb-0">Venue</h4>
-                            </div>
-                            Cultural Conference Center of Heraklion<br>
-                            N. Plastira Avenue 49, Heraklion, 71201 Greece
+                            <p class="text">A not-for-profit organization, IEEE is the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+                            Near modern-day Tunis, Tunisia</p>
                         </div>
                     </div>
 
                 </section>
             </div>
-            <div class="text-center p-3 footer-text" style="background-color: rgba(0, 0, 0, 0.2)">
-                © Copyright <span id="year"></span>: Remote Sensing Laboratory, Foundation for Research and Technology - Hellas (FORTH)
+            <div class="text-center p-3 footer-text" style="background-color: #d24438">
+                © Copyright <span id="year"></span> : IEEE – All rights reserved. Use of this website signifies your agreement to the IEEE Terms and Conditions.
             </div>
 
         </footer>
-
         <script>
             document.getElementById("year").innerHTML = new Date().getFullYear();
         </script>

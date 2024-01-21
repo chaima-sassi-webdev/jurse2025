@@ -9,7 +9,7 @@ class Speakers extends Model
 {
    use HasFactory;
 
-    protected $fillable = ['firstName', 'lastname', 'website', 'description'];
+    protected $fillable = ['firstName', 'lastname', 'website', 'description','src'];
 
     public $timestamps = true;
 }

@@ -160,12 +160,12 @@
                 <div id="desktop-description" class="postcontent col-lg-9" style="padding-bottom: 20px !important;">
 
                     <div class="my-4 row">
+                        @foreach($links as $index => $link)
                         <div class="col-lg-6 text-center">
-                            <a class="button button-3d button-large button-rounded button-yellow button-wide" href="https://ieeexplore.ieee.org/xpl/conhome/10144111/proceeding" target="_blank">IEEE JURSE 2023 PROCEEDINGS</a>
+                            <a class="button button-3d button-large button-rounded  button-wide @if($index == 0) button-light @endif" href="{{ $link->url }}" target="_blank">{{ $link->title }}</a>
                         </div>
-                        <div class="col-lg-6 text-center">
-                            <a class="button button-3d button-large button-rounded button-pale-red button-wide" href="https://www.grss-ieee.org/wp-content/uploads/2023/03/cfp_JURSE23_revised.pdf" target="_blank">IEEE J-STARS CALL FOR PAPERS</a>
-                        </div>
+                         @endforeach
+
                     </div>
 
                     <p>
@@ -233,19 +233,19 @@
                     </div>
 
                 </div>
-
                 <!-- ========== RECENT POSTS ========== -->
-                <div id="recent-posts" class="sidebar col-lg-3">
+                <div id="recent-posts">
                     <div class="sidebar-widgets-wrap" style="height: 100%; overflow: hidden;">
 
                         <div class="widget clearfix text-center">
 
-                            <h4 class="mt-5 mb-1">Recent Posts</h4>
-
+                            <h4 class="mt-5 mb-1">Recent Posts j</h4>
+                            @foreach($posts as $post)
                             <div class="twitter-desktop">
-                                <a class="twitter-timeline" data-height="750" data-dnt="true" href="https://twitter.com/JURSE2023?ref_src=twsrc%5Etfw"></a> <script async src="../platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <a class="twitter-timeline" data-height="750" data-dnt="true" href="{{$post->link}}"></a> jhjh
+                                <p class="text">Date: {{$post->datetweet}}</p>
                             </div>
-
+                            @endforeach
                         </div>
 
                     </div>
@@ -253,7 +253,6 @@
             </div>
         </div>
 
-        <div class="section mb-0">
             <div class="container text-center">
 
                 <h3 class="titular-title gradient-horizon gradient-text">Meet the organizers</h3>
@@ -269,60 +268,57 @@
                 <a href="https://ccbsconference.gr/"><img src="images/ccbs.png" width="250px" alt=""></a>
 
             </div>
-        </div>
 
-        <footer class="text-center text-lg-start bg-footer">
+
+        <footer class="text-center text-lg-start sectionfooter">
             <div class="container p-4">
                 <section class="footer-text">
                     <div class="row">
+                         <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
+                            <div id="logo">
+                            <a href="{{ route('index.html') }}" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="RSLab Logo"></a>
+                         </div>
+                        </div>
+                        <hr class="w-100 clearfix d-md-none mt-3" />
 
                         <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
                             <div class="mb-2">
-                                <h4 class="white">Stay connected!</h4>
+                                <h4 class="text">Stay connected!</h4>
                             </div>
-                            <a href="https://www.facebook.com/rslabgr/" target="_blank" class="social-icon inline-block si-dark si-small mb-0 pb-0 si-facebook">
+                            <a href="https://www.facebook.com/ieee.tunisia" target="_blank" class="social-icon inline-block si-dark si-small mb-0 pb-0 si-facebook">
                                 <i class="icon-facebook"></i>
                                 <i class="icon-facebook"></i>
                             </a>
 
-                            <a href="https://twitter.com/JURSE2023/" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-twitter">
+                             <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQG5HniUDlKx0wAAAYz6SvaQpUMIcf_nfDRUv8BAPpWbyRPN6HUpHMQKon0Ni1tekESKfk0KVJ9DrQ41uYokN3u2drWJBATlmFyM8WZfCAuj5bItLucCWriZf5U0A-s8nNzHvuY=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fieee-tunisia%2F" target="_blank" class="social-icon inline-block si-dark si-small mb-0 pb-0 si-facebook">
+                                <i class="icon-linkedin"></i>
+                                <i class="icon-linkedin"></i>
+                            </a>
+
+                            <a href="https://twitter.com/IEEEorg" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-twitter">
                                 <i class="icon-twitter"></i>
                                 <i class="icon-twitter"></i>
                             </a>
 
-                            <a href="https://www.youtube.com/playlist?list=PLyHJqeu2tpN5iLzj1HaVP9oCirvFoBN7r" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-youtube">
+                            <a href="https://www.youtube.com/channel/UCsXcME7PcCuZ2ROr-K2R1oQ" target="_blank" class="social-icon inline-block si-dark si-small si-borderless mb-0 si-youtube">
                                 <i class="icon-youtube"></i>
                                 <i class="icon-youtube"></i>
                             </a>
                         </div>
 
-                        <hr class="w-100 clearfix d-md-none mt-3" />
-
-                        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
-                            <div class="mb-1">
-                                <h4 class="white mb-0">Contact person</h4>
-                            </div>
-                            Nektarios Chrysoulakis<br>
-                            zedd2@iacm.forth.gr<br>
-                            +30 2810-391-762 <br>
-                            +30 6932-929-775
-                        </div>
 
                         <hr class="w-100 clearfix d-md-none mt-3" />
 
                         <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3 text-center">
-                            <div class="mb-1">
-                                <h4 class="white mb-0">Venue</h4>
-                            </div>
-                            Cultural Conference Center of Heraklion<br>
-                            N. Plastira Avenue 49, Heraklion, 71201 Greece
+                            <p class="text">A not-for-profit organization, IEEE is the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+                            Near modern-day Tunis, Tunisia</p>
                         </div>
                     </div>
 
                 </section>
             </div>
-            <div class="text-center p-3 footer-text" style="background-color: rgba(0, 0, 0, 0.2)">
-                © Copyright <span id="year"></span>: Remote Sensing Laboratory, Foundation for Research and Technology - Hellas (FORTH)
+            <div class="text-center p-3 footer-text" height="100%" style="background-color: #d24438">
+                © Copyright <span id="year"></span> : IEEE – All rights reserved. Use of this website signifies your agreement to the IEEE Terms and Conditions.
             </div>
 
         </footer>

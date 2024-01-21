@@ -12,8 +12,4 @@ class Page extends Model
     protected $fillable = ['name'];
     public $timestamps = true;
 
-    public function links()
-    {
-        return $this->hasMany(Link::class, 'page_id');
-    }
 }
